@@ -630,7 +630,6 @@ class PHP_CodeCoverage
     private function processUncoveredFileFromWhitelist($uncoveredFile, array &$data, array $uncoveredFiles)
     {
         $this->driver->start();
-        include_once $uncoveredFile;
         $coverage = $this->driver->stop();
 
         foreach ($coverage as $file => $fileCoverage) {
